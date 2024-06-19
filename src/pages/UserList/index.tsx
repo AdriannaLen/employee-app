@@ -50,7 +50,6 @@ const UserList: React.FC = () => {
         <p>{t("app.email")}</p>
         <p>{t("app.phone")}</p>
         <p>{t("app.desc")}</p>
-        <p>{t("app.desc")}</p>
         <p>{t("app.view")}</p>
       </Card>
       <ul className="user-list__items">
@@ -68,7 +67,6 @@ const UserList: React.FC = () => {
               <p className="user-list__description">{employee.birthDate}</p>
               <p className="user-list__description">{employee.email}</p>
               <p className="user-list__description">{employee.phone}</p>
-              <p className="user-list__description">lorem</p>
               <p className="user-list__description">lorem</p>
               <Button
                 onClick={() => openModal(employee)}

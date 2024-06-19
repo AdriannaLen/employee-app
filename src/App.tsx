@@ -16,7 +16,7 @@ export enum Locale {
 }
 
 function App() {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const changeLanguage = () => {
     i18n.changeLanguage(i18n.language === Locale.PL ? Locale.EN : Locale.PL);
   };
