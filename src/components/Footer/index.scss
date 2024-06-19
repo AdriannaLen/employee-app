@@ -1,57 +1,83 @@
 .footer {
-    width: 100%;
-    bottom: 0;
-    background-color: #282c34;
-    padding: 20px;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  bottom: 0;
+  background-color: #282c34;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  letter-spacing: 1.5px;
+
+  &__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin: 10px 15px;
+    font-size: 18px;
+    text-align: left;
+    transition: color 0.3s ease;
+
+    &.pink:hover {
+      color: pink;
+    }
+
+    &.blue:hover {
+      color: aqua;
+    }
+  }
+
+  .footer__link {
+    flex-direction: column;
+    padding: 10px 10px;
+    font-size: 14px;
     color: white;
-    letter-spacing: 1.5px;
-  
-    &__list {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
+    text-decoration: none;
+    margin-top: 5px;
+    transition: color 0.3s ease;
+
+    &.pink:hover {
+      color: pink;
+    }
+
+    &.blue:hover {
+      color: aqua;
+    }
+
+    @media (max-width: 759px) {
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
+      flex-direction: column;
     }
-  
-    &__item {
-      margin: 10px 15px;
-      font-size: 18px;
-      text-align: left;
-      transition: color 0.3s ease;
-  
-      &.pink:hover {
-        color: pink;
-      }
-  
-      &.blue:hover {
-        color: aqua;
-      }
+  }
+
+  @media (min-width: 760px) {
+    display: block;
+    padding: 10px 10px;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+    margin-top: 5px;
+    transition: color 0.3s ease;
+
+    &.pink:hover {
+      color: pink;
     }
-  
-    .footer__link {
-      display: block;
-      padding: 10px 0;
-      font-size: 14px;
-      color: white;
-      text-decoration: none;
-      margin-top: 5px;
-      transition: color 0.3s ease;
-  
-      &.pink:hover {
-        color: pink;
-      }
-  
-      &.blue:hover {
-        color: aqua;
-      }
+
+    &.blue:hover {
+      color: aqua;
     }
   }
 
   h2 {
-
     text-align: center;
-    color:palevioletred;
+    margin: 10px 0;
+    font-size: 12px;
+    color: palevioletred;
   }
+}
