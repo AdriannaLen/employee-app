@@ -7,9 +7,10 @@ import Modal from "../../components/Modal";
 import { Employee } from "../../Context/hooks/useAppContext";
 import { useTranslation } from "react-i18next";
 import Search from "../../components/Search";
+import Loader from "../../components/Loader/Loader";
 
 const UserList: React.FC = () => {
-  const { employees, setEmployees } = useContext(AppContext);
+  const { employees, setEmployees, isLoading } = useContext(AppContext);
   const [results, setResults] = useState<Employee[]>([]);
   const [showModal, setShowModal] = useState(false);
   const [selectedEmployee, setSelectedEmployee] = useState<Employee | null>(
@@ -53,6 +54,7 @@ const UserList: React.FC = () => {
         <p>{t("app.view")}</p>
         <p>{t("app.delete")}</p>
       </Card>
+      { isLoading? <Loader /> : 
       <ul className="user-list__items">
         {displayedEmployees.map((employee) => (
           <li key={employee.id} className="user-list__item">
@@ -87,7 +89,7 @@ const UserList: React.FC = () => {
           </li>
         ))}
       </ul>
-
+}
       {showModal && selectedEmployee && (
         <Modal
           firstName={selectedEmployee.firstName}

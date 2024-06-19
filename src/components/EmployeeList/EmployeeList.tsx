@@ -1,11 +1,12 @@
 import { useContext } from "react";
 import { AppContext } from "../../Context/AppContext";
+import './EmployeeList.scss'
 
 const EmployeeList = () => {
   const { employees } = useContext(AppContext);
 
   return (
-    <div>
+    <div className="employee-list">
       <ul>
         {employees.map(({ id, firstName, lastName }) => (
           <li key={id}>
