@@ -12,7 +12,7 @@ const Nav = () => {
   const { t } = useTranslation();
   
   return (
-    <div>
+    <div className="nav-container">
         <ul className="nav">
           <li>
             <DarkModeToggle

@@ -3,6 +3,8 @@
   display: block;
 }
 
+.nav-container {
+  padding: 20px 0;
 ul {
   li {
     list-style: none;
@@ -12,4 +14,5 @@ ul {
       text-decoration: none;
     }
   }
+}
 }

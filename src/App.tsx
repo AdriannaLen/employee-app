@@ -39,8 +39,6 @@ function App() {
         </div>
       </div>
       <div className="content">
-      
-        
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/user-list" element={<UserList />} />
