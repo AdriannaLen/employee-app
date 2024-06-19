@@ -4,11 +4,13 @@
     display: block;
 }
 
-.nav {
+ul {
     li {
-        list-style: none;
+       
         width: 100%;
         margin-bottom: 5px;
+        a {
+            text-decoration: none;
+        }
     }
 }
-

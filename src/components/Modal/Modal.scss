@@ -7,6 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  
 }
 
 .modal {
@@ -32,6 +33,11 @@
         justify-content: center;
         align-items: center;
 
+        @media (max-width: 769px) {
+            display:block;
+          
+        }
+
         &-box {
             display: flex;
             flex-direction: column;
@@ -47,7 +53,6 @@
                 grid-column: span 2;
             }
         }
-
     }
 
     &__form {
@@ -65,8 +70,6 @@
             width: 50%;
         }
     }
-
-
 }
 
 .edit-worker {
@@ -85,16 +88,21 @@
 
     &__form {
         display: flex;
+        margin-top: 10px;
         flex-direction: column;
         gap: 15px;
         background: #fff;
         padding: 20px;
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        width: 40%;
+        width: 40%; 
+        @media (max-width: 769px) {
+            width: 100%;
+
+        }
 
         input, select {
-            padding: 10px;
+            padding: 10px 0;
             border-radius: 4px;
             border: 1px solid #ccc;
             font-size: 16px;
@@ -102,7 +110,7 @@
         }
 
         button {
-            padding: 10px;
+            padding: 20px;
             border-radius: 4px;
             border: 1px solid #ccc;
             font-size: 16px;

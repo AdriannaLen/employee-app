@@ -13,7 +13,6 @@ const Nav = () => {
   
   return (
     <div>
-      <nav className="">
         <ul className="nav">
           <li>
             <DarkModeToggle
@@ -47,7 +46,6 @@ const Nav = () => {
             </Link>
           </li>
         </ul>
-      </nav>
     </div>
   );
 };

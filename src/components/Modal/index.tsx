@@ -175,10 +175,9 @@ const Modal = ({
               <input type="tel" value={tempPhone} onChange={handlePhoneChange} name="phone" placeholder="Numer telefonu" />
               <input type="url" value={tempImage} onChange={handleImageChange} name="image" placeholder="URL do zdjęcia" />
               <Button label='Edit' type='submit' />
+              <Button label={t("app.close")} onClick={onClose} />
             </form>
           </div>
-
-          <Button label={t("app.close")} onClick={onClose} />
         </section>
       </div>
 
