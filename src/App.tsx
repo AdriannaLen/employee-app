@@ -9,7 +9,6 @@ import UserDetails from "./pages/UserDetails";
 import AddNewWorker from "./pages/AddNewWorker";
 import { useTranslation } from "react-i18next";
 import Footer from "./components/Footer";
-import Main from "./components/Main";
 
 export enum Locale {
   EN = "en",
@@ -44,7 +43,6 @@ function App() {
         
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/user-form" element={<UserForm />} /> */}
         <Route path="/user-list" element={<UserList />} />
         <Route path="/user-list/:userID" element={<UserDetails />} />
         <Route path="*" element={<NotFound />} />

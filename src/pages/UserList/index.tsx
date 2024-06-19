@@ -3,17 +3,13 @@ import { AppContext } from "../../Context/AppContext";
 import Card from "../../components/Card/Card";
 import "./index.scss";
 import Button from "../../components/Button/Button";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import Modal from "../../components/Modal";
 import { Employee } from "../../Context/hooks/useAppContext";
-import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Search from "../../components/Search";
 
 const UserList: React.FC = () => {
   const { employees, setEmployees } = useContext(AppContext);
-  const navigate = useNavigate();
   const [results, setResults] = useState<Employee[]>([]);
   const [showModal, setShowModal] = useState(false);
   const [selectedEmployee, setSelectedEmployee] = useState<Employee | null>(
@@ -32,10 +28,6 @@ const UserList: React.FC = () => {
 
   const { t } = useTranslation();
 
-  const handleAddEmployee = () => {
-    navigate("/add-new-worker");
-  };
-
   const handleDeleteEmployee = (id: number) => {
     const newEmployees = employees.filter((employee) => employee.id !== id);
     setEmployees(newEmployees);
@@ -50,16 +42,6 @@ const UserList: React.FC = () => {
 
         <Search employees={employees} setResults={setResults} />
 
-        <Button
-          variant="primary"
-          height="large"
-          onClick={handleAddEmployee}
-          label={
-            <>
-              <FontAwesomeIcon icon={faPlus} /> {t("app.new-employee")}
-            </>
-          }
-        />
       </header>
       <Card className="user-list__card--header">
         <p>{t("app.image")}</p>

@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { Employee } from "../../Context/hooks/useAppContext";
 import "./index.scss";
 import { FaSearch } from "react-icons/fa";
-import useContext from "../../Context/AppContext";
 import "./index.scss";
 
 export type SearchProps = {
@@ -12,7 +11,6 @@ export type SearchProps = {
 };
 
 const Search: React.FC<SearchProps> = ({ employees, setResults }) => {
-  // const { AppContext } = useContext(AppContext);
   const [input, setInput] = useState("");
 
   const fetchEmployees = (value: string) => {

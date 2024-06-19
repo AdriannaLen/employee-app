@@ -6,7 +6,6 @@ import DarkModeToggle from "react-dark-mode-toggle";
 import { useTranslation } from "react-i18next";
 import "./index.scss";
 import "./index.scss";
-import Button from "../Button/Button";
 
 const Nav = () => {
   const [isDarkMode, setIsDarkMode] = useState(() => false);

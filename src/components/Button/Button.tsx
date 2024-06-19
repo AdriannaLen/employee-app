@@ -1,8 +1,6 @@
 import React from "react";
 import './button.scss';
 import classNames from "classnames";
-import { LinkProps } from "react-router-dom";
-
 
 type ButtonProps = {
   label?: string | JSX.Element,
@@ -43,7 +41,6 @@ const Button: React.FC<ButtonProps> = ({
   }
   )
   return <button className={buttonClasses} onClick={onClick} disabled={disabled} type={type} >
-    {/* {icon && <img src={icon}></img>} */}
     {!hideLabel ? label : ''}
     {children}
   </button>;

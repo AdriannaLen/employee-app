@@ -1,14 +1,10 @@
 import { useContext } from "react";
 import { AppContext } from "../../Context/AppContext";
 import "./index.scss";
-import EmployeeList from "../../components/EmployeeList/EmployeeList";
-
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Card from "../../components/Card/Card";
-import Button from "../../components/Button/Button";
 import Main from "../../components/Main";
-import Nav from "../../components/Nav";
 
 const Home = () => {
   const { employees } = useContext(AppContext);

@@ -178,8 +178,6 @@ const Modal = ({
             </form>
           </div>
 
-          <Button label='Close' onClick={onClose} />
-
           <Button label={t("app.close")} onClick={onClose} />
         </section>
       </div>
