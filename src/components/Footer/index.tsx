@@ -12,7 +12,7 @@ const Footer = () => {
             Andrzej
             <a href="https://www.linkedin.com/in/andrzej" target="_blank" className="footer__link blue">LinkedIn</a>
           </li>
-          <li className="footer__item pink">
+          {/* <li className="footer__item pink">
             Kunegunda
             <a href="https://www.linkedin.com/in/kunegunda" target="_blank" className="footer__link pink">LinkedIn</a>
           </li>
@@ -31,7 +31,7 @@ const Footer = () => {
           <li className="footer__item pink">
             Sandra
             <a href="https://www.linkedin.com/in/sandra" target="_blank" className="footer__link pink">LinkedIn</a>
-          </li>
+          </li> */}
         </ul>
         <h2>Copyright 2024</h2>
       </footer>
