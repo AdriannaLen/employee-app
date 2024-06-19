@@ -51,6 +51,7 @@ const UserList: React.FC = () => {
         <p>{t("app.phone")}</p>
         <p>{t("app.desc")}</p>
         <p>{t("app.view")}</p>
+        <p>{t("app.delete")}</p>
       </Card>
       <ul className="user-list__items">
         {displayedEmployees.map((employee) => (
