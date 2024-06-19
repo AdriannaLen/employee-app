@@ -8,7 +8,7 @@
   text-align: center;
   color: white;
   letter-spacing: 1.5px;
-
+ 
   &__list {
     list-style-type: none;
     padding: 0;
@@ -19,9 +19,12 @@
   }
 
   &__item {
-    margin: 10px 15px;
-    font-size: 18px;
-    text-align: left;
+    flex-direction: column;
+    padding: 10px 10px;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+    margin-top: 5px;
     transition: color 0.3s ease;
 
     &.pink:hover {
@@ -33,7 +36,7 @@
     }
   }
 
-  .footer__link {
+  &__link {
     flex-direction: column;
     padding: 10px 10px;
     font-size: 14px;
@@ -41,7 +44,7 @@
     text-decoration: none;
     margin-top: 5px;
     transition: color 0.3s ease;
-
+   
     &.pink:hover {
       color: pink;
     }
