@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.scss";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
-import AppContextProvider from "./Context/AppContext";
+import { AppContextProvider }from "./Context/AppContext";
 import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n";
 const root = ReactDOM.createRoot(

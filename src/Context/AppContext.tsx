@@ -1,5 +1,10 @@
-import React, { createContext, useState, useEffect } from 'react';
-import useFetchEmployees, { Employee } from "./hooks/useAppContext";
+import React, { createContext,PropsWithChildren, FC, useState, useEffect } from 'react';
+import useAppContext, { Employee } from "./hooks/useAppContext";
+
+// type Props = {
+// children: JSX.Element | JSX.Element[];
+// };
+
 type EmployeeContextType = {
   employees: Employee[];
   isLoading: boolean;
@@ -10,11 +15,9 @@ type EmployeeContextType = {
 export const AppContext = createContext<EmployeeContextType>(
   {} as EmployeeContextType
 );
-type Props = {
-  children: JSX.Element | JSX.Element[];
-};
-export const AppContextProvider = ({ children }: Props) => {
-  const { fetchedEmployees, isLoading, updateEmployees, deleteEmployee } = useFetchEmployees();
+
+export const AppContextProvider: FC<PropsWithChildren> = ({children}) => {
+  const { fetchedEmployees, isLoading, updateEmployees, deleteEmployee } = useAppContext();
   const [employees, setEmployees] = useState<Employee[]>([]);
   useEffect(() => {
     if (fetchedEmployees.length > 0) {
@@ -22,9 +25,16 @@ export const AppContextProvider = ({ children }: Props) => {
     }
   }, [fetchedEmployees]);
   return (
-    <AppContext.Provider value={{ employees, isLoading, setEmployees, updateEmployees, deleteEmployee }}>
+    <AppContext.Provider 
+    value={{ 
+      employees, 
+      isLoading, 
+      setEmployees, 
+      updateEmployees, 
+      deleteEmployee 
+      }}
+      >
       {children}
     </AppContext.Provider>
   );
 };
-export default AppContextProvider;
