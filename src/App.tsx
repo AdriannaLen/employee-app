@@ -51,8 +51,8 @@ function App() {
             <Route path="*" element={<NotFound />} />
             <Route path="/add-new-worker" element={<AddNewWorker />} />
           </Routes>
-          <Footer />
         </div>
+        <Footer />
       </div>
    
   );
