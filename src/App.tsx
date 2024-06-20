@@ -21,7 +21,7 @@ function App() {
     i18n.changeLanguage(i18n.language === Locale.PL ? Locale.EN : Locale.PL);
   };
   return (
-    <div className="App">
+  
       <div className="app">
         <div className="sidebar">
           <Nav />
@@ -54,7 +54,7 @@ function App() {
           <Footer />
         </div>
       </div>
-    </div>
+   
   );
 }
 
