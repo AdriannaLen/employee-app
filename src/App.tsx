@@ -21,34 +21,39 @@ function App() {
     i18n.changeLanguage(i18n.language === Locale.PL ? Locale.EN : Locale.PL);
   };
   return (
-
     <div className="App">
-    <div className="app">
-      <div className="sidebar">
-      <Nav />
-      <button className="language-btn button  button--content button--large btn"onClick={changeLanguage}>
-        <span>{i18n.language}</span>
-      </button>
-      </div>
-      <div className="hamburger">
-        <div className="wrapper">
+      <div className="app">
+        <div className="sidebar">
           <Nav />
-          <button className="language-btn button  button--content button--large btn"onClick={changeLanguage}>
+          <button
+            className="language-btn button  button--content button--large btn"
+            onClick={changeLanguage}
+          >
             <span>{i18n.language}</span>
           </button>
         </div>
+        <div className="hamburger">
+          <div className="wrapper">
+            <Nav />
+            <button
+              className="language-btn button  button--content button--large btn"
+              onClick={changeLanguage}
+            >
+              <span>{i18n.language}</span>
+            </button>
+          </div>
+        </div>
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/user-list" element={<UserList />} />
+            <Route path="/user-list/:userID" element={<UserDetails />} />
+            <Route path="*" element={<NotFound />} />
+            <Route path="/add-new-worker" element={<AddNewWorker />} />
+          </Routes>
+          <Footer />
+        </div>
       </div>
-      <div className="content">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/user-list" element={<UserList />} />
-        <Route path="/user-list/:userID" element={<UserDetails />} />
-        <Route path="*" element={<NotFound />} />
-        <Route path="/add-new-worker" element={<AddNewWorker />} />
-      </Routes>
-      <Footer />
-      </div>
-    </div>
     </div>
   );
 }
