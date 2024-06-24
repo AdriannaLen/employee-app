@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { AppContext } from "../../Context/AppContext";
-import './EmployeeList.scss'
+import "./EmployeeList.scss";
 
 const EmployeeList = () => {
   const { employees } = useContext(AppContext);

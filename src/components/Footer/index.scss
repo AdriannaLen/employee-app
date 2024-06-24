@@ -8,7 +8,7 @@
   text-align: center;
   color: white;
   letter-spacing: 1.5px;
- 
+
   &__list {
     flex-direction: column;
     list-style-type: none;
@@ -45,7 +45,7 @@
     text-decoration: none;
     margin-top: 5px;
     transition: color 0.3s ease;
-   
+
     &.pink:hover {
       color: pink;
     }

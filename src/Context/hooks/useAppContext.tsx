@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 export type Employee = {
   id: number;
@@ -52,21 +52,20 @@ export const useAppContext = () => {
   const updateEmployees = async (id: number, updatedData: Employee) => {
     try {
       const res = await fetch(`https://dummyjson.com/users/${id}`, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(updatedData)
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(updatedData),
       });
-      
+
       if (!res.ok) throw new Error("Cannot update employee");
 
       const updatedEmployee = await res.json();
 
-      setFetchedEmployees((prev) => (
-        prev.map((employee) => (
+      setFetchedEmployees((prev) =>
+        prev.map((employee) =>
           employee.id === id ? { ...employee, ...updatedEmployee } : employee
-        ))
-      ));
-
+        )
+      );
     } catch (error) {
       console.error("Error updating employee:", error);
     }
@@ -76,19 +75,17 @@ export const useAppContext = () => {
     fetchEmployees();
   }, []);
 
-
   const deleteEmployee = async (id: number) => {
     try {
       const res = await fetch(`https://dummyjson.com/users/${id}`, {
-        method: 'DELETE'
+        method: "DELETE",
       });
 
       if (!res.ok) throw new Error("Cannot delete employee");
 
-      setFetchedEmployees(prevEmployees =>
-        prevEmployees.filter(employee => employee.id !== id)
+      setFetchedEmployees((prevEmployees) =>
+        prevEmployees.filter((employee) => employee.id !== id)
       );
-
     } catch (error) {
       console.error("Error deleting employee:", error);
     }

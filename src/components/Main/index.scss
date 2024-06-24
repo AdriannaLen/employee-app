@@ -18,28 +18,25 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    
 
     h2 {
       font-size: 56px;
       font-family: "Lato-Bold", sans-serif;
       margin-bottom: 20px;
-      color:palevioletred;
+      color: palevioletred;
     }
     p {
       font-family: "Lato-Regular", sans-serif;
       font-size: 20px;
       text-align: justify;
       margin: 0 20px;
-     
     }
   }
   .main-img {
     padding-left: 16px;
     img {
       border-radius: 10px;
-      width: 100%; 
-     
+      width: 100%;
     }
   }
 }
@@ -50,7 +47,6 @@
 
     .main-description {
       justify-content: center;
-
     }
   }
 }
