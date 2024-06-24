@@ -17,7 +17,7 @@ export const AppContext = createContext<EmployeeContextType>(
 );
 
 export const AppContextProvider: FC<PropsWithChildren> = ({children}) => {
-  const { fetchedEmployees, isLoading, updateEmployees, deleteEmployee } = useAppContext();
+  const { fetchedEmployees, isLoading, updateEmployees, deleteEmployee} = useAppContext();
   const [employees, setEmployees] = useState<Employee[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(10);
