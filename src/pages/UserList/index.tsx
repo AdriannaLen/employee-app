@@ -43,8 +43,6 @@ const UserList: React.FC = () => {
   };
 
   const displayedEmployees = results.length > 0 ? results : employees;
-
-  // Pagination logic
   const indexOfLastEmployee = currentPage * itemsPerPage;
   const indexOfFirstEmployee = indexOfLastEmployee - itemsPerPage;
   const currentEmployees = displayedEmployees.slice(
@@ -136,7 +134,7 @@ const UserList: React.FC = () => {
               label={t("app.next")}
               variant="secondary"
               height="large"
-              disabled={currentPage === 4}
+              disabled={currentPage === totalPages}
             />
           </div>
         </>
