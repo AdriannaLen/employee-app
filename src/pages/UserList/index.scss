@@ -1,114 +1,117 @@
 .user-list {
-    padding: 20px;
+  padding: 20px;
+  width: 100%;
+  background-color: #dee4ef;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    @media (min-width: 768px) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    margin: 30px 0;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 100%;
-    background-color: #dee4ef;
-  
-    &__header {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 20px;
-      margin-left: 10px;
-      margin-right: 10px;
-      @media (min-width: 768px) {
-        flex-direction: row;
-        justify-content: space-between;
-      }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 20px;
     }
-  
-    &__title {
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 20px;
-      @media (min-width: 768px) {
-        margin-bottom: 0;
-      }
-    }
-  
-    &__items {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-  
-    &__item {
-      margin: 30px 0;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      width: 100%;
-    }
-  
-    &__card {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      padding: 20px;
-  
+
+    &--header {
+      display: none;
       @media (min-width: 768px) {
         display: grid;
         grid-template-columns: repeat(8, 1fr);
         gap: 20px;
-      }
-  
-      &--header {
-        display: none;
-        @media (min-width: 768px) {
-          display: grid;
-          grid-template-columns: repeat(8, 1fr);
-          gap: 20px;
-          align-items: center;
-          padding: 20px;
-          margin: 30px 0;
-          background: #fff;
-          border-radius: 8px;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-          width: 97.4%;
-        }
-      }
-    }
-  
-    &__image {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-right: 20px;
-    }
-  
-    &__name {
-      font-size: 18px;
-      font-weight: 600;
-      margin: 0;
-      flex-grow: 1;
-    }
-  
-    &__btn,
-    &__delete-btn {
-      margin-top: 10px;
-      background-color: #007bff;
-      color: white;
-      width: 100%;
-      @media (min-width: 768px) {
-        margin-left: 20px;
-        width: auto;
-      }
-    }
-  
-    &__delete-btn {
-      background-color: #dc3545;
-    }
-  
-    &__description {
-      font-size: 14px;
-      color: #6c757d;
-      margin: 0;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      @media (min-width: 768px) {
-        margin: 0 20px;
+        align-items: center;
+        padding: 20px;
+        margin: 30px 0;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 97.4%;
       }
     }
   }
+
+  &__image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+
+  &__name {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    flex-grow: 1;
+  }
+
+  &__btn,
+  &__delete-btn {
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    width: 100%;
+    @media (min-width: 768px) {
+      margin-left: 20px;
+      width: auto;
+    }
+  }
+
+  &__delete-btn {
+    background-color: #dc3545;
+  }
+
+  &__description {
+    font-size: 14px;
+    color: #6c757d;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    @media (min-width: 768px) {
+      margin: 0 20px;
+    }
+  }
+  .pagination {
+    text-align: center;
+  }
+}

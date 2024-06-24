@@ -39,5 +39,9 @@ export default {
     "app.delete": "Usuń",
     "app.main.title":"Platforma zarządzania pracownikami",
     "app.main.description":"Odkryj nowoczesne zarządzanie personelem z naszą platformą: oferujemy intuicyjne narzędzia do efektywnego dodawania, edycji i monitorowania danych pracowników.",
+    "app.page": "Stona",
+    "app.of": "z",
+    "app.prev": "strona poprzednia",
+    "app.next": "następna strona",
   },
 };

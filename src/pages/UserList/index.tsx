@@ -10,10 +10,20 @@ import Search from "../../components/Search";
 import Loader from "../../components/Loader/Loader";
 
 const UserList: React.FC = () => {
-  const { employees, setEmployees, isLoading, currentPage, itemsPerPage, totalPages, setCurrentPage } = useContext(AppContext);
+  const {
+    employees,
+    setEmployees,
+    isLoading,
+    currentPage,
+    itemsPerPage,
+    totalPages,
+    setCurrentPage,
+  } = useContext(AppContext);
   const [results, setResults] = useState<Employee[]>([]);
   const [showModal, setShowModal] = useState(false);
-  const [selectedEmployee, setSelectedEmployee] = useState<Employee | null>(null);
+  const [selectedEmployee, setSelectedEmployee] = useState<Employee | null>(
+    null
+  );
 
   const openModal = (employee: Employee) => {
     setSelectedEmployee(employee);
@@ -37,9 +47,11 @@ const UserList: React.FC = () => {
   // Pagination logic
   const indexOfLastEmployee = currentPage * itemsPerPage;
   const indexOfFirstEmployee = indexOfLastEmployee - itemsPerPage;
-  const currentEmployees = displayedEmployees.slice(indexOfFirstEmployee, indexOfLastEmployee);
+  const currentEmployees = displayedEmployees.slice(
+    indexOfFirstEmployee,
+    indexOfLastEmployee
+  );
 
-  
   const handlePrevPage = () => {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1);
@@ -113,7 +125,7 @@ const UserList: React.FC = () => {
               label={t("app.prev")}
               variant="secondary"
               height="large"
-              disabled={currentPage === 1}
+              disabled={currentPage === 0}
             />
             <span className="pagination__info">
               {t("app.page")} {currentPage} {t("app.of")} {totalPages}
@@ -124,7 +136,7 @@ const UserList: React.FC = () => {
               label={t("app.next")}
               variant="secondary"
               height="large"
-              disabled={currentPage === totalPages}
+              disabled={currentPage === 4}
             />
           </div>
         </>

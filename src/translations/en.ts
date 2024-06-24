@@ -40,5 +40,9 @@ export default {
     "app.main.title":"Efficient Employee Management Platform",
     "app.main.description": 
     "Explore modern personnel management with our platform: we provide intuitive tools for efficient employee data entry, editing, and monitoring.",
+    "app.page": "Page",
+    "app.of": "of",
+    "app.prev": "previous page",
+    "app.next": "next page",
   },
 };
