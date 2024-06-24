@@ -32,7 +32,7 @@
     justify-content: center;
     align-items: center;
 
-    @media (max-width: 769px) {
+    @media (max-width: 768px) {
       display: block;
     }
 
@@ -94,7 +94,7 @@
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 40%;
-    @media (max-width: 769px) {
+    @media (max-width: 768px) {
       width: 100%;
     }
 

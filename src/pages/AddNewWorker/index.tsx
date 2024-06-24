@@ -4,8 +4,10 @@ import { AppContext } from "../../Context/AppContext";
 import { Employee } from "../../Context/hooks/useAppContext";
 import "./AddNewWorker.scss";
 import { t } from "i18next";
+import PopUp from "../../components/PopUp";
 const AddNewWorker: React.FC = () => {
   const { employees, setEmployees } = useContext(AppContext);
+  const [ visible, setVisible ] = useState(false);
   const [employee, setEmployee] = useState<Employee>({
     id: employees.length + 1,
     firstName: "",
@@ -56,7 +58,12 @@ const AddNewWorker: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setEmployees([...employees, employee]);
-    navigate("/user-list");
+    setVisible(true);
+
+    setTimeout(() => {
+      setVisible(false);
+      navigate("/user-list");
+    }, 3000);
   };
   return (
     <div className="add-worker">
@@ -128,6 +135,7 @@ const AddNewWorker: React.FC = () => {
         />
         <button type="submit">{t("app.add")}</button>
       </form>
+      {visible && <PopUp visible={visible} />}
     </div>
   );
 };

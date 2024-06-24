@@ -54,13 +54,13 @@
       color: aqua;
     }
 
-    @media (max-width: 759px) {
+    @media (max-width: 768px) {
       display: flex;
       flex-direction: column;
     }
   }
 
-  @media (min-width: 760px) {
+  @media (min-width: 768px) {
     display: block;
     padding: 10px 10px;
     font-size: 14px;
