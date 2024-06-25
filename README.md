@@ -56,45 +56,6 @@ Skopiuj kod
 yarn start
 This will launch the application in your default web browser at http://localhost:3000.
 
-Project Structure
-plaintext
-Skopiuj kod
-.
-├── public
-│   └── index.html
-├── src
-│   ├── components
-│   │   ├── Button
-│   │   │   └── Button.tsx
-│   │   ├── Card
-│   │   │   └── Card.tsx
-│   │   ├── Loader
-│   │   │   └── Loader.tsx
-│   │   ├── Modal
-│   │   │   └── Modal.tsx
-│   │   ├── PopUp
-│   │   │   ├── index.scss
-│   │   │   └── PopUp.tsx
-│   │   └── Search
-│   │       └── Search.tsx
-│   ├── Context
-│   │   ├── AppContext.tsx
-│   │   └── hooks
-│   │       └── useAppContext.ts
-│   ├── pages
-│   │   ├── AddNewWorker
-│   │   │   ├── AddNewWorker.scss
-│   │   │   └── AddNewWorker.tsx
-│   │   └── UserList
-│   │       ├── index.scss
-│   │       └── UserList.tsx
-│   ├── i18n.ts
-│   ├── index.tsx
-│   ├── App.tsx
-│   └── App.scss
-├── .gitignore
-├── package.json
-└── README.md
 
 Context and Hooks
 AppContext
