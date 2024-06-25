@@ -95,6 +95,7 @@ Skopiuj kod
 ├── .gitignore
 ├── package.json
 └── README.md
+
 Context and Hooks
 AppContext
 The AppContext provides global state management for the application. It includes:
