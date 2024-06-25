@@ -45,17 +45,15 @@ This will launch the application in your default web browser at http://localhost
 AppContext
 The AppContext provides global state management for the application. It includes:
 
-# employees: The list of employees.
-# isLoading: A boolean indicating if data is being fetched.
-# setEmployees: A function to update the employees list.
-# updateEmployees: A function to update a specific employee.
-# deleteEmployee: A function to delete a specific employee.
-# currentPage: The current page number for pagination.
-# itemsPerPage: Number of items to display per page.
-# totalPages: Total number of pages based on the items per page.
-# setCurrentPage: A function to set the current page.
-# useAppContext Hook
-# The useAppContext hook provides functions for fetching, updating, and deleting employee data from an API.
+employees: The list of employees.
+isLoading: A boolean indicating if data is being fetched.
+setEmployees: A function to update the employees list.
+updateEmployees: A function to update a specific employee.
+deleteEmployee: A function to delete a specific employee.
+currentPage: The current page number for pagination.
+itemsPerPage: Number of items to display per page.
+totalPages: Total number of pages based on the items per page.
+setCurrentPage: A function to set the current page.
 
 ## Running Tests
 To run tests, use the following command:
