@@ -1,4 +1,4 @@
-export default {
+const translations = {
   translation: {
     "app.home": "Strona główna",
     "app.employee-list": "Lista pracowników",
@@ -37,11 +37,13 @@ export default {
     "app.user-details": "Szczegóły użytkownika",
     "app.see-more": "Zobacz więcej",
     "app.delete": "Usuń",
-    "app.main.title":"Platforma zarządzania pracownikami",
-    "app.main.description":"Odkryj nowoczesne zarządzanie personelem z naszą platformą: oferujemy intuicyjne narzędzia do efektywnego dodawania, edycji i monitorowania danych pracowników.",
-    "app.page": "Stona",
+    "app.main.title": "Platforma zarządzania pracownikami",
+    "app.main.description": "Odkryj nowoczesne zarządzanie personelem z naszą platformą: oferujemy intuicyjne narzędzia do efektywnego dodawania, edycji i monitorowania danych pracowników.",
+    "app.page": "Strona",
     "app.of": "z",
-    "app.prev": "strona poprzednia",
-    "app.next": "następna strona",
+    "app.prev": "Poprzednia strona",
+    "app.next": "Następna strona",
   },
 };
+
+export default translations;

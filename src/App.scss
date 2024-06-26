@@ -8,7 +8,7 @@ $app-bg-color: #dee4ef;
 $breakpoint: 768px;
 
 body {
-  background-color: #dee4ef;
+  background-color: $app-bg-color;
   font-family: Arial, sans-serif;
   height: 100%;
   box-sizing: border-box;
@@ -19,6 +19,7 @@ body {
 *::after {
   box-sizing: inherit;
 }
+
 .app {
   display: flex;
   flex-wrap: wrap;
@@ -43,8 +44,13 @@ body {
     margin-top: 10px;
     width: 20%;
     transition: transform 0.3s ease-in-out;
-    @media (max-width: 768px) {
-      width: 40%;
+
+    @media (max-width: $breakpoint) {
+      width: 70%;
+    }
+
+    &.open {
+      transform: translateX(0);
     }
 
     a {
@@ -67,30 +73,8 @@ body {
       background-color: palevioletred;
       font-size: 14px;
       &:hover {
-        background-color:rgb(246, 125, 165);
+        background-color: rgb(246, 125, 165);
       }
-    }
-  }
-
-  .sidebar.open {
-    transform: translateX(0);
-  }
-}
-
-.user-list {
-  padding: 20px;
-  background-color: $app-bg-color;
-
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    .search-bar {
-      width: 300px;
-      padding: 10px;
-      border: 1px solid $secondary-color;
-      border-radius: 5px;
     }
   }
 }
@@ -120,16 +104,18 @@ body {
       transition: all 0.3s ease-in-out;
     }
 
-    &.open .bar:nth-child(1) {
-      transform: translateY(10px) rotate(45deg);
-    }
+    &.open {
+      .bar:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+      }
 
-    &.open .bar:nth-child(2) {
-      opacity: 0;
-    }
+      .bar:nth-child(2) {
+        opacity: 0;
+      }
 
-    &.open .bar:nth-child(3) {
-      transform: translateY(-10px) rotate(-45deg);
+      .bar:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
+      }
     }
   }
 }
@@ -137,9 +123,10 @@ body {
 @media (max-width: $breakpoint) {
   .app {
     flex-direction: column;
+
     .btn {
       width: 100%;
-      padding: 10px 10px;
+      padding: 10px;
     }
   }
 
