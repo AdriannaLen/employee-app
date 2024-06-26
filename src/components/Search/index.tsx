@@ -1,9 +1,8 @@
 import { t } from "i18next";
 import React, { useState } from "react";
 import { Employee } from "../../Context/hooks/useAppContext";
-import "./index.scss";
+import "./index.scss"; // Importujemy tylko raz
 import { FaSearch } from "react-icons/fa";
-import "./index.scss";
 
 export type SearchProps = {
   employees: Employee[];

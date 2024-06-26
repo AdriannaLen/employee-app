@@ -11,8 +11,14 @@ body {
   background-color: #dee4ef;
   font-family: Arial, sans-serif;
   height: 100%;
+  box-sizing: border-box;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 .app {
   display: flex;
   flex-wrap: wrap;
@@ -35,8 +41,11 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     margin-top: 10px;
-    width: 33%;
+    width: 20%;
     transition: transform 0.3s ease-in-out;
+    @media (max-width: 768px) {
+      width: 40%;
+    }
 
     a {
       gap: 10px;
@@ -55,7 +64,11 @@ body {
     .language-btn {
       margin: 20px;
       width: 50px;
-      background-color: $primary-color;
+      background-color: palevioletred;
+      font-size: 14px;
+      &:hover {
+        background-color:rgb(246, 125, 165);
+      }
     }
   }
 
@@ -124,6 +137,10 @@ body {
 @media (max-width: $breakpoint) {
   .app {
     flex-direction: column;
+    .btn {
+      width: 100%;
+      padding: 10px 10px;
+    }
   }
 
   .content {

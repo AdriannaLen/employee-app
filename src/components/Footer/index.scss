@@ -1,8 +1,8 @@
+
 .footer {
   display: flex;
   flex-direction: column;
-  width: 100vw;
-  bottom: 0;
+  width: 100%;
   background-color: #282c34;
   padding: 20px;
   text-align: center;
@@ -20,7 +20,6 @@
   }
 
   &__item {
-    flex-direction: column;
     padding: 10px 10px;
     font-size: 14px;
     color: white;
@@ -38,7 +37,6 @@
   }
 
   &__link {
-    flex-direction: column;
     padding: 10px 10px;
     font-size: 14px;
     color: white;
@@ -55,26 +53,18 @@
     }
 
     @media (max-width: 768px) {
-      display: flex;
-      flex-direction: column;
+      width: 90%;
+      margin: 0 auto;
     }
   }
 
-  @media (min-width: 768px) {
-    display: block;
-    padding: 10px 10px;
-    font-size: 14px;
-    color: white;
-    text-decoration: none;
-    margin-top: 5px;
-    transition: color 0.3s ease;
-
-    &.pink:hover {
-      color: pink;
-    }
-
-    &.blue:hover {
-      color: aqua;
+  @media (max-width: 768px) {
+    padding: 10px;
+    .footer__list,
+    .footer__item,
+    .footer__link {
+      width: 90%;
+      margin: 0 auto;
     }
   }
 
