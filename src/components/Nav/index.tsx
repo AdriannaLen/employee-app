@@ -1,10 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./index.scss";
-import DarkModeToggle from "react-dark-mode-toggle";
 import { useTranslation } from "react-i18next";
-import "./index.scss";
-import "./index.scss";
 
 const Nav = () => {
   const { t } = useTranslation();

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.scss";
 import { Route, Routes } from "react-router-dom";
 import Nav from "./components/Nav";
@@ -20,41 +20,41 @@ function App() {
   const changeLanguage = () => {
     i18n.changeLanguage(i18n.language === Locale.PL ? Locale.EN : Locale.PL);
   };
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!isSidebarOpen);
+  };
+
   return (
-  
-      <div className="app">
-        <div className="sidebar">
-          <Nav />
-          <button
-            className="language-btn button  button--content button--large btn"
-            onClick={changeLanguage}
-          >
-            <span>{i18n.language}</span>
-          </button>
-        </div>
-        <div className="hamburger">
-          <div className="wrapper">
-            <Nav />
-            <button
-              className="language-btn button  button--content button--large btn"
-              onClick={changeLanguage}
-            >
-              <span>{i18n.language}</span>
-            </button>
-          </div>
-        </div>
-        <div className="content">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/user-list" element={<UserList />} />
-            <Route path="/user-list/:userID" element={<UserDetails />} />
-            <Route path="*" element={<NotFound />} />
-            <Route path="/add-new-worker" element={<AddNewWorker />} />
-          </Routes>
-        </div>
-        <Footer />
+    <div className="app">
+      <div className={`sidebar ${isSidebarOpen ? "open" : ""}`}>
+        <Nav />
+        <button
+          className="language-btn button button--content button--large btn"
+          onClick={changeLanguage}
+        >
+          <span>{i18n.language}</span>
+        </button>
       </div>
-   
+      <div className="hamburger" onClick={toggleSidebar}>
+        <div className={`hamburger-icon ${isSidebarOpen ? "open" : ""}`}>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+        </div>
+      </div>
+      <div className="content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/user-list" element={<UserList />} />
+          <Route path="/user-list/:userID" element={<UserDetails />} />
+          <Route path="*" element={<NotFound />} />
+          <Route path="/add-new-worker" element={<AddNewWorker />} />
+        </Routes>
+      </div>
+      <Footer />
+    </div>
   );
 }
 
