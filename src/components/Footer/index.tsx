@@ -12,11 +12,11 @@ const Footer = () => {
             rel="noreferrer"
             className="footer__link pink"
           >
-           project by Adrianna Lenczewska
+           Adrianna Lenczewska
           </a>
        </li>
       </ul>
-      <h2>copyright 2024</h2>
+      <h2>Copyright 2024</h2>
     </footer>
   );
 };
