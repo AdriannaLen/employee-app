@@ -135,6 +135,7 @@ body {
   }
 
   .sidebar {
+    position: fixed;
     transform: translateX(-100%);
     opacity: 0.9;
     width: 100%;
@@ -145,6 +146,7 @@ body {
   }
 
   .hamburger {
+    position: fixed;
     display: block;
     width: 100%;
     text-align: right;
@@ -152,6 +154,7 @@ body {
   }
 
   .sidebar.open {
+    position: fixed;
     transform: translateX(0);
   }
 }
