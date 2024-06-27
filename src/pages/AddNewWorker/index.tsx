@@ -7,7 +7,7 @@ import { t } from "i18next";
 import PopUp from "../../components/PopUp";
 const AddNewWorker: React.FC = () => {
   const { employees, setEmployees } = useContext(AppContext);
-  const [ visible, setVisible ] = useState(false);
+  const [visible, setVisible] = useState(false);
   const [employee, setEmployee] = useState<Employee>({
     id: employees.length + 1,
     firstName: "",
