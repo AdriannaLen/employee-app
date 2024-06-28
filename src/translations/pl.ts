@@ -43,6 +43,7 @@ const translations = {
     "app.of": "z",
     "app.prev": "Poprzednia strona",
     "app.next": "Następna strona",
+    "app.new": "Pomyślnie dodano nowego pracownika",
   },
 };
 

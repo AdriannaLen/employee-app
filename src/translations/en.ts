@@ -44,5 +44,6 @@ export default {
     "app.of": "of",
     "app.prev": "previous page",
     "app.next": "next page",
+    "app.new": "Added new employee successfully",
   },
 };
