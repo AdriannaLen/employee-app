@@ -1,4 +1,5 @@
 import "./index.scss";
+import { FaGithub } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -15,6 +16,16 @@ const Footer = () => {
            Adrianna Lenczewska
           </a>
        </li>
+       <li>
+          <a
+            href="https://github.com/AdriannaLen"
+            target="_blank"
+            rel="noreferrer"
+            className="footer__link pink"
+          >
+            <FaGithub className="footer__icon" />
+          </a>
+        </li>
       </ul>
       <h2>Copyright 2024</h2>
     </footer>
