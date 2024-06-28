@@ -1,5 +1,5 @@
-
 .footer {
+  margin-top: auto;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -7,10 +7,12 @@
   padding: 20px;
   text-align: center;
   color: white;
-p {
-  text-transform: uppercase;
-  color:aqua;
-}
+
+  p {
+    text-transform: uppercase;
+    color: aqua;
+  }
+
   &__list {
     flex-direction: column;
     list-style-type: none;
