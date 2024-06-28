@@ -1,4 +1,5 @@
 import React from 'react';
+import './index.scss'
 
 interface PopUpProps {
   visible: boolean;
@@ -6,9 +7,12 @@ interface PopUpProps {
 
 const PopUp: React.FC<PopUpProps> = ({ visible }) => {
   return (
-    <div className={`popup ${visible ? "popup--visible" : ""}`} data-testid="popup">
-      <p>Employee added successfully!</p>
-    </div>
+    <>
+      {visible && <div className="overlay"></div>}
+      <div className={`popup ${visible ? "popup--visible" : ""}`} data-testid="popup">
+        <p>Employee added successfully!</p>
+      </div>
+    </>
   );
 };
 
